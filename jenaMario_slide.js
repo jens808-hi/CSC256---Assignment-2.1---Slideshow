@@ -401,7 +401,7 @@ function showPrincessPeachCard() {
     favoriteGameAudio.pause();
     /* Resets my Favorite Game sound to the beginning, preventing it from continuing if the user starts the game over */
     favoriteGameAudio.currentTime = 0;
-    /* Cerate the Princess Peach card: replaces whatever card was previously displayed. The Princess Peach card contains
+    /* Create the Princess Peach card: replaces whatever card was previously displayed. The Princess Peach card contains
     the Peach heading, is a clickable image, the description of why this is my favorite character, instructions to click
     the image to link to the Nintendo online store and the start over button */
     itemDisplay.innerHTML = `
@@ -422,7 +422,7 @@ function showPrincessPeachCard() {
             >
                 <img
                     class="card-image"
-                    src="./Images/Princess Peach.JPG"
+                    src="./Images/Princess Peach.jpg"
                     alt="Princess Peach"
                 >
             </a>
