@@ -1,0 +1,149 @@
+<!--Doctype html - The 1st tag tells the browser that this is an HTML5 webpage-->
+<!DOCTYPE html>
+<!--The 2nd tag on our html webpages is the HTML tag; language = English is automatically added by VS Code -->
+<html lang="en">
+<!--The 3rd tag of our html webpage is the head tag; it tells the browser about the content of the
+page and to expect pretty much any character from any language (primarily for browser and search engines) --> 
+<head>
+    <!--The 4th tag is the meta charset tag, which tells the browser what character set to use -->
+    <meta charset="UTF-8">
+    <!--The 5th tag is the viewport meta name tag, which controls the layout on mobile browsers;
+    page responsiveness on phones, tablets, and computers. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--The 6th tag is the title tag, which is the text that appears in the browser tab -->
+    <title>Jena's Super Mario Bros Themed HTML Assignment 2.1: Slideshow</title>
+    <!-- The 7th tag is the link tag, which is a best practice for linking to an external CSS file; 
+    rel = relationship, href = hypertext reference -->
+    <link rel="stylesheet" href="./jenaMario_slide.css"> 
+    <!-- The 8th tag is the script tag, which is a best practice for linking to an external 
+     JavaScript file; src = source -->
+     <!-- defer makes sure the HTML loads before JavaScript runs -->
+    <script src="./jenaMario_slide.js" defer></script>   
+<!-- the closing head tag is the last line of our head section that closes the head tag -->
+</head>
+    <!--The 7th tag is the body section tag, which contains the visible page content 
+    (text, images, videos) of the webpage -->  
+    <body>
+        <!--The main tag is a best practice for organizing the main content of the page, with
+        the id attribute which page is a best practice for styling a specific part of the text content of the page -->
+        <main id="page">
+            <!-- The header section is a best practice for organizing the top of the page; may contain menu,
+            logo, page title, with the class attribute which contains the intro-header class that is a best 
+            practice for styling a specific part of the text content of the page -->
+            <header class="intro-header">
+                <!-- The nav tag is a best practice for organizing the navigation menu of the page -->
+                <nav class="galaxy-nav" aria-label="Main navigation">
+                <!-- The ul tag is an unordered list, which contains the menu items of the page -->
+                    <ul>
+                        <!-- The li tag is a list item, which contains the menu item of the page -->
+                        <!-- Takes user back to the main landing page -->
+                        <li><a href="./jenaMario_slideshow.html">Home 🏠</a></li> 
+                        <!-- Takes user to the YouTube Super Mario Bros 2 - Galaxy movie trailer -->
+                        <li><a href="https://youtu.be/H8HZ6_3nXSY?si=AOwE2TO951Q37YaB">Super Mario Bros. 2 - Galaxy Movie trailer 🎬</a></li>
+                        <!-- Takes user to the w3schools website for coding help -->
+                        <li><a href="https://www.w3schools.com/js/default.asp">JavaScript Coding Help 💻</a></li>         
+                    <!-- the a tag is an anchor tag, which contains the link to the menu item of the page -->
+                    </ul>
+                <!-- The closing nav tag is the last line of our navigation menu that closes the nav tag -->
+                </nav>
+                <!-- The h1 tag is the main heading of the page, and should be used only once per page -->
+                <h1>Welcome to My World!</h1><br>
+                <!-- The h4 tag is a secondary heading of the page, and can be used multiple times per page,
+                the subtitle tag is a best practice for styling a specific part of the text content of the page -->
+                <h4 id="subtitle2">Explore the World of Mario and discover some of my favorite things!.</h4>
+                <!-- The p tag is a paragraph tag, which contains the subtitle of the page -->
+                    <p class="subtitle">
+                        First, click through the slideshow below to see some of my favorite <br>Super Mario Bros. characters and Worlds from the game. <br>
+                    <!-- The span tag is a best practice for styling a specific part of the text content of the page,
+                    class attribute which contains the highlight class that is a best practice for styling a 
+                    specific part of the text content of the page -->
+                    <span class="highlight"></span>
+                    <!--The closing p tag is the last line of our paragraph that closes the p tag -->
+                    </p>
+                <!-- The section tag which contains the Super Mario slideshow  -->
+                <section class="mario-slideshow" aria-label="Super Mario World slideshow">
+                    <!-- The h2 tag is a secondary heading of the page, and can be used multiple times per page,
+                    for styling the slideshow title -->
+                    <h2 class="slideshow-title">⭐ Super Mario World ⭐</h2><br>
+                    <!-- The p tag is a paragraph tag, which contains the slideshow instructions for the page -->
+                    <p class="slideshow-instructions">
+                        Use the <strong>[ < Previous ]</strong> and <strong>[ Next > ]</strong> buttons to explore the slideshow. 
+                    </p><!--The closing p tag is the last line of our paragraph that closes the p tag -->
+                    <!--Creates the container that will hold my slideshow -->
+                    <div class="slideshow-container">
+                        <!-- JavaScript puts the current image/video here -->
+                        <div id="slideshow-image-container"></div>
+                        <!--Description changes the text for every slide -->
+                        <p id="slideshow-description"></p>
+                        <!-- Previous & Next buttons -->
+                        <div class="slideshow-controls">
+                        <!-- Creates a clickable button called <Previous, using previous button id, gives it a CSS class, uses accessibility -->
+                        <button id="previous-button" class="slide-button" type="button" aria-label="Previous slide">< Previous</button>
+                        <!-- Creates a clickable button called Next>, using next button id, gives it a CSS class, uses accessibility -->
+                        <button id="next-button" class="slide-button" type="button" aria-label="Next slide">Next ></button>
+                    <!--The closing div tag-->
+                    </div> 
+                <!--The closing div tag-->
+                </div>
+
+            </section>
+            <!-- The section tag uses the id attribute which contains the id for the block-section tag for styling 
+             a specific part of the text content of the page -->
+            <section id="block-section">
+                <!-- Game heading -->
+                <h3 class="question-title">⭐ Ready to Discover More?⭐</h3>
+                <!-- The p tag is a paragraph tag, which contains the message of the page, with the id attribute
+                which uses a block tag to contain the block-message for styling a specific part of the text
+                content of the page -->    
+                <p id="block-message">
+                    Now hit the Question Block to begin!
+                <!-- The closing p tag is the last line of our paragraph that closes the p tag -->
+                </p>
+                    <!-- The button tag creates the clickable Question block, the user clicks this button to "hit" the Question block.
+                    Every time the user clicks it, javaScript will increment the hit counter, play the coin sound, simulate the box being
+                    hit with animation, display the next card, and determine which item appears next based on the current hit number  -->
+                    <button id="question-block" class="question-block" type="button" aria-label="Hit the Question Block">
+                    <!-- The img tag is an image tag, which contains the image of the page. This particular image is inside a 
+                    button making the image clickable. Set it up to have JavaScript disable this button after the third hit
+                    and then reset to the orginal question -->
+                    <img src="./Images/Yellow_Question-block.jpg" alt="Yellow Super Mario Question Block" class="mario-question">
+                </button>
+            <!-- The closing section tag is the last line of our section that closes the section tag -->
+            </section>
+            <!-- The section tag uses the id attribute which is empty when the page first loads. Using javaScript to
+            display three different cards (name, favorite super mario bros game, and princess peach) to the user after the player hits the question block. 
+            my answers. Using aria-live="polite" to change the card each time -->
+            <section id="item-display" aria-live="polite"></section>
+                <!-- The div tag creates the visual counter for my mini game. It tells the user how many times they have 
+                clicked (hit) the Question block. Using javaScript to automatically change the number inside the span id 
+                "hit number." Set the maximum to 3 hits -->
+                <div id="hit-counter"><span id="hit-number">0</span><span>/ 3 Hits</span></div>
+                <!-- This paragraph tag displays a message to the user after they have discovered all three items (cards).
+                Displays the following message. Using javaScriptto show/hide this message by adding or removing the css class called hidden -->
+                    <p id="reset-message" class="hidden">You found all three items! Starting over...</p>
+                        <a href="https://youtu.be/H2K4JzHVxpM?si=3emIuSOEjL5zv1EX" target="_blank" rel="noopener noreferrer" 
+                        aria-label="Watch Super Nintendo World Hollywood Studios preview" class="mario-image-link" aria-label="Watch the Nintendo World preview">
+                            <!-- The img tag is an image tag, which contains the image of the page -->
+                            <img src="./Images/SuperMario_bros.jpg" alt="Super Mario Bros - Watch Super Nintendo World Preview" class="mario-image">
+                                <p class="mario-video-caption">🍄Click the link to preview Super Nintendo World!</p>    
+                        </a>
+        <!-- The closing main tag is the last line of our main content that closes the main tag -->
+        </main>
+            <!-- The closing header tag is the last line of our header section that closes the header tag -->
+            </header>
+                <!-- The audio tag is used by javaScript to play different sounds used throughout my mini game. 
+                JavaScript controls the audio for each event: Question block hit(coin sound), hit #1 (displays name card):
+                plays super mario bros intro song, hit #2 (displays favorite mario game card): plays Mario's "here we go" sound,
+                hit #3 (displays princess peach card): plays Mario's "oki doki" sound-->
+                <audio id="game-audio" preload="auto"></audio>
+                    <!-- The footer tag is a best practice for organizing the footer section of the page; 
+                    things like legal stuff, contact information, disclaimer, copyright -->
+                    <footer>
+                    <!-- The p tag is a paragraph tag, which contains the footer text content of the page -->
+                    <p>&copy; 2026&nbsp;|&nbsp;Created by Jena Kahili |&nbsp;UAT&nbsp;| CSC256 - Designing Website Interfaces&nbsp;| Assignment 2.1: Slideshow </p>
+                    <!-- The closing footer tag is the last line of our footer section that closes the footer tag -->
+                    </footer>
+    <!--The closing body tag, which is the last line of our .html page that closes the body tag -->
+    </body> 
+<!--The closing html tag, which is the last line of our .html page thatcloses the html tag -->
+</html>
